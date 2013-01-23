@@ -12,21 +12,19 @@ get_header(); ?>
 		<div class="container" id="wider">
 		
         <div class="imagecontainer">
-        <div style="width:1002px; margin:0 auto;padding-top:5px">
-            <div id="custom_page_image1" style="float:left">
+            <div id="contact_page_image1" style="float:left">
             <?php if( get_field('contact_page_image1') ):
         ?><img src="<?php the_field('contact_page_image1'); ?>" alt="" /><?php endif; ?></div>
             
-            <div id="custom_page_image2" style="margin-left:5px;float:left">
+            <div id="contact_page_image2" style="margin-left:5px;float:left">
             <?php if( get_field('contact_page_image2') ):
         ?><img src="<?php the_field('contact_page_image2'); ?>" alt="" /><?php endif; ?></div>
         
-            <div id="custom_page_image3" style="margin-left:5px;float:left">
+            <div id="contact_page_image3" style="margin-left:5px;float:left">
             <?php if( get_field('contact_page_image3') ):
         ?><img src="<?php the_field('contact_page_image3'); ?>" alt="" /><?php endif; ?></div>
         
             <div class="clear"></div>
-        </div>
         </div><!--imagecontainer-->
      
 		<?php include(TEMPLATEPATH . '/library/lownav_projects.php'); ?>

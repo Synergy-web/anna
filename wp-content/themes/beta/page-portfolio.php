@@ -7,7 +7,7 @@
 		 
 		</div><!-- end #header -->	
 		
-	<div class="pagecontainer lined">
+	<div class="pagecontainer">
 	
 		<div class="container" id="wider">
 		

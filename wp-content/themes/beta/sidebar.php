@@ -80,22 +80,24 @@
 				<!-- begin general sidebar -->
 				
                 <h5>Client Reviews</h5>
-					<?php
-if ( get_query_var('paged') ) $paged = get_query_var('paged');  
-if ( get_query_var('page') ) $paged = get_query_var('page');
- 
-					$query = new WP_Query( array( 'post_type' => 'review', 'paged' => $paged ) );
-					 
-					if ( $query->have_posts() ) : ?>
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>	
-							<div class="entry">
-								<?php the_content(); ?>
-							</div>
-						<?php endwhile; wp_reset_postdata(); ?>
-						<!-- show pagination here -->
-					<?php else : ?>
-						<!-- show 404 error here -->
-					<?php endif; ?>
+					 <?php
+						if ( get_query_var('paged') ) $paged = get_query_var('paged');  
+						if ( get_query_var('page') ) $paged = get_query_var('page');
+						 
+						$query = new WP_Query( array( 'post_type' => 'review', 'paged' => $paged, 'posts_per_page' => 3, 'orderby' => 'rand' ) );
+						 
+						if ( $query->have_posts() ) : ?>
+							<?php while ( $query->have_posts() ) : $query->the_post(); ?>	
+								<div class="review_outer_para" style="margin-top:10px">
+								  <div class="review_inner_para">	
+									<?php the_content(); ?><div class="reviewauthor">&#150; <span style="font-style:italic"><?php the_field( "author" ); ?></span></div>
+								   </div> 
+								</div>
+							<?php endwhile; wp_reset_postdata(); ?>
+							<!-- show pagination here -->
+						<?php else : ?>
+							<!-- show 404 error here -->
+						<?php endif; ?>
                 
 				<div class="facebookbox">
                 <h5>Facebook Feed</h5>

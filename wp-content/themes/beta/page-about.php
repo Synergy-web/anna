@@ -11,12 +11,12 @@ get_header(); ?>
 	<div class="widecontainer">		
 				
 		<div class="pagecontainer">
-		<div style="width:1002px;margin:0 auto;padding-top:5px">	
-        <div id="custom_page_image1" style="float:left">
+		<div class="imagecontainer">	
+        <div id="about_page_image1" style="float:left">
 		<?php if( get_field('about_page_image1') ):
 	?><img src="<?php the_field('about_page_image1'); ?>" alt="" /><?php endif; ?></div>
     	
-        <div id="custom_page_image2" style="margin-left:10px;float:left">
+        <div id="about_page_image2" style="margin-left:10px;float:left">
 		<?php if( get_field('about_page_image2') ):
 	?><img src="<?php the_field('about_page_image2'); ?>" alt="" /><?php endif; ?></div>
     	

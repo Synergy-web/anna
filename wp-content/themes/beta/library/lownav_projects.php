@@ -11,17 +11,13 @@
 		<span class="current"><?php the_title(); ?></span>
 		
 		<?php } else { ?> 
-		
-		<div class="projectnav">
-    	
-        <ul>
-        <a href="#" class="selected"><?php _e('Portfolio', 'cebolang'); ?></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'project' ) ); ?>
-        </ul>
-  
-    
-    	</div><!--end projectnav-->
-	
+
+            <div class="projectnav">
+                <ul>
+                <a href="#" class="selected"><?php _e('Portfolio', 'cebolang'); ?></a>
+                <?php wp_nav_menu( array( 'theme_location' => 'project' ) ); ?>
+                </ul>
+            </div><!--end projectnav-->
 	
 	<div class="socials">
 	
@@ -44,7 +40,7 @@
 	
 	</div><!--end socials-->
 	
-	
+	<div class="clear"></div>
 		
 		<? } ?>
 	
