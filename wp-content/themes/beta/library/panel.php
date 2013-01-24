@@ -1,6 +1,6 @@
 	<!-- PANEL -->
         <section>
-        <div class="panel">
+        <div class="contactpanel">
         	<div class="container">
         	<!-- LOGO -->
 

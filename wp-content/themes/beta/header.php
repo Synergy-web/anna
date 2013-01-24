@@ -469,7 +469,7 @@
 		     
 		     	<p><?php echo get_option('cebo_quote'); ?></p>
 		     	
-		     	<a class="trigger" href="#"><img src="<?php bloginfo ("template_url"); ?>/images/contact_bubble.png" title="contact us" /></a>
+		     	<a class="" href="#"><img src="<?php bloginfo ("template_url"); ?>/images/contact_bubble.png" title="contact us" /></a>
 
 		     </div>
 		   <? } ?>  
