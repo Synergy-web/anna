@@ -6,7 +6,7 @@
 
 $(window).load(function(){
 	$(".trigger").click(function(){
-		$(".panel").toggle("fast");
+		$(".contactpanel").toggle("fast");
 		$(this).toggleClass("active");
 		return false;
 	});
