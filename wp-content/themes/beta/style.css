@@ -2295,7 +2295,7 @@ article #thumbnails ul li {
 }
 
 .foot li {
-	width: 200px;
+	width: 190px;
 	margin: 6px;
 	float: left;
 	padding: 0 10px;
@@ -2646,7 +2646,6 @@ article #thumbnails ul li {
 		.wider { width: 975px !important; min-width: 970px !important; }
 		.copyright {padding:10px 1% 10px 1%;}
 		.copyright p {width:100%}
-		.foot {width:100%}
 		.imagecontainer {width:100%}
 		#about_page_image1 {width:32%} 
 		#about_page_image2 {width:64%}
@@ -2682,6 +2681,7 @@ article #thumbnails ul li {
 		float: right;
 		position: relative;
 		top:10px;
+		right:10px;
 		max-width: 800px;
 	}
 
@@ -2761,14 +2761,13 @@ article #thumbnails ul li {
 		top: 0 !important;
 	}
 	#thumbnails {
-		width: 745px !important;
+
 		min-width: 0 !important;
 	}
 	#wider {
 		min-width: 0 !important;
 		width: 95% !important;
 	}
-
 	.primary {
 		 right: -62px;
     width: 79%;
@@ -2839,12 +2838,17 @@ article #thumbnails ul li {
 	.readmore {
 		right: 0;
 	}
+	.foot {
+		width:100%;
+	}
     .foot #leftfootersecond {
     	display: none;
     }
-	.foot .rightfooter {
-		float:left;
+	.foot #leftfooterfirst {
+		width:25%;
 	}
+
+	
     .footer {
     	width: 100%;
     	min-height: 20px;
@@ -2910,6 +2914,9 @@ article #thumbnails ul li {
 		display: inline-block;
 		*display: inline;
 		*zoom: 1;
+	}
+	.foot {
+		width:100%;
 	}
     .foot #leftfooterfirst, .foot #leftfootersecond {
     	display: none;
@@ -3262,6 +3269,9 @@ article #thumbnails ul li {
 		*display: inline;
 		*zoom: 1;
 	}
+	.foot {
+		width:100%;
+	}
     .foot #leftfooterfirst, .foot #leftfootersecond {
     	display: none;
     }
@@ -3349,10 +3359,8 @@ article #thumbnails ul li {
 	}
 	.copyright {
 		padding: 20px 0 40px 10px;
-		
 	}
-	.copyright p, .copyright a {
-		
+	.copyright p, .copyright a {		
 		font-size:12px;
 	}
 	#webdesign {
@@ -3420,7 +3428,7 @@ article #thumbnails ul li {
 	article ul.postlings li h3 {
 		margin: 10px 0;
 	}
-		.readmore {
+	.readmore {
 		right: 0;
 	}
 	.lownav {
@@ -3572,9 +3580,10 @@ article #thumbnails ul li {
     top: 0;
     width: 0;	
 	}
-	.copyright {width:100%;padding:10px 10px 20px 20px}
-	.copyright p{
-	width:100%;	
+	.copyright {
+		padding:10px 10px 20px 20px
+	}
+	.copyright p{	
 	text-align:left;
 	font-size:12px;
 	padding-bottom:10px
