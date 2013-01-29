@@ -88,7 +88,7 @@
 		</ul><!--end foot-->
 		<div class="clear"></div>
 		<div class="copyright">
-		<p class="foot" style="min-height:30px;color:#ff3300;">&nbsp;&nbsp;&nbsp;<? _e('&#169; 2013 Anna Beaudry Photographic Design | All Rights Reserved'); ?><a style="padding-left:10px" href="http://www.synergy-web.net" target="_blank" id="webdesign"><? _e('Website by Synergy Web Design Inc.'); ?></a></p> 
+		<p class="foot" style="min-height:30px;color:#ff3300;"><? _e('&#169; 2013 Anna Beaudry Photographic Design | All Rights Reserved'); ?><a href="http://www.synergy-web.net" target="_blank" id="webdesign"><? _e('Website by Synergy Web Design Inc.'); ?></a></p> 
         </div>
         
 		<div class="clear"></div>

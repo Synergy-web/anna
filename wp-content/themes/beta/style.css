@@ -98,7 +98,7 @@ article {
 	padding: 0 0 30px 0;
 }
 article blockquote {
-	border-left: 5px solid #159b98;
+	border-left: 5px solid #ff3300;
 	font-family: Helvetica;
 	color: #555555;
 	font-size: 13px;
@@ -461,7 +461,7 @@ nav select {
 	width: 70%;
 	position: relative;	
 }
-.projectnav:before {
+.projectnav:before,.projectnav:after {
 	border-bottom: 20px solid transparent;
 	border-left: 20px solid white;
 	border-top: 20px solid transparent;
@@ -472,7 +472,17 @@ nav select {
 	top: 0;
 	width: 0;	
 }
-
+.projectnav:before {
+	border-bottom: 21px solid transparent;
+	border-left: 22px solid red;
+	border-top: 20px solid transparent;
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -23px;
+	top: 0;
+	width: 0;	
+}
 .projectnav ul {
 	padding:0 !important;
 }
@@ -579,7 +589,7 @@ nav select {
 
 #wider {
 	width: 100% !important;
-	max-width: 975px !important;
+	max-width: 1000px !important;
 	margin: auto;
 	padding: 0 0 30px 0px;
 }
@@ -934,7 +944,7 @@ article iframe {
 	border: 0;
 }
 .content article h1 {
-	color: #159b98;
+	color: #ff3300;
 }
 .content aside {
 	float: right;
@@ -966,7 +976,7 @@ article iframe {
 }
 
 aside h4 {
-	color: #159b98;
+	color: #ff3300;
 	font-family: 'PT Sans';
 	font-size: 22px;
 	margin: 15px 0;
@@ -1185,10 +1195,10 @@ article h6 {
 	font-weight:bold;
 }
 article ul li {
-	color: #159b98;
+	color: #ff3300;
 }
 article ol li {
-	color: #159b98;
+	color: #ff3300;
 }
 article .authorbox {
  	background: none repeat scroll 0 0 #F4F4F4;
@@ -2029,12 +2039,7 @@ article #thumbnails ul li {
 		color: #bbb;
 	}
 	p.form-allowed-tags {
-		margin: -10px 0 4px 0;
-		font-family: Helvetica, Arial;
-		font-size: 10px;
-		color: #666;
-		padding-left: 5px !important;
-		color: #bbb;
+		display:none;
 	}
 	#respond textarea {
 		background: none repeat scroll 0 0 #FFFFFF;
@@ -2245,8 +2250,8 @@ article #thumbnails ul li {
 	border:1px solid #eee;
 	padding:5px 10px;
 	position:absolute;
-	right:85px;
-	top:45px;
+	right:55px;
+	top:55px;
 	background:#ff3300;
 }
 #submitbtn:hover {
@@ -2428,7 +2433,7 @@ article #thumbnails ul li {
 .foot #rightfooterlast h2 {
 	width:125px;
 	text-align:right;
-	float:right;	
+	margin-left:30px;
 }
 .foot #leftfooterfirst h2,.foot #leftfootersecond h2 {
 	width:125px;	
@@ -2633,18 +2638,34 @@ article #thumbnails ul li {
 }
 /* Default Screen */
 @media (min-width : 960px) and (max-width : 1280px) { 
+		.lownav {width:98%}
 		
 		#page { width : 960px; } 
 		#second { height: 3100px; }
 		#wider { max-width: 1000px !important; }
 		.wider { width: 975px !important; min-width: 970px !important; }
-		
+		.copyright {padding:10px 1% 10px 1%;}
+		.copyright p {width:100%}
+		.foot {width:100%}
+		.imagecontainer {width:100%}
+		#about_page_image1 {width:32%} 
+		#about_page_image2 {width:64%}
+		#contact_page_image1, #contact_page_image2,#contact_page_image3 {
+			width:32.5%;
+		}
+	.wider {
+		min-width: 0 !important;
+	}
+		.logo img {width:380px}
     }
+
 
 /* Tablet Screen Big */
 
 @media (min-width : 720px) and (max-width : 960px) {
-
+	.wider {
+		min-width: 0 !important;
+	}
     nav {
 		position: relative;
 		position: fixed;
@@ -2662,7 +2683,8 @@ article #thumbnails ul li {
 		position: relative;
 		top:10px;
 		max-width: 800px;
-}
+	}
+
 	.lownav {
 		width: 96%;
 	}
@@ -2687,12 +2709,23 @@ article #thumbnails ul li {
     .lownav .lefty {
 		width: 100%;
 	}
+	
+	.socials {
+		width: 24%;
+	}
+	.filter::before {
+	border:none;
+	}
+	.contactcolumn2 {display:none}
 	.imagecontainer {max-width:100%;}
 	#contact_page_image1,#contact_page_image2,#contact_page_image3 {width:32%;height:auto;}
 	#contact_page_image1 img,#contact_page_image2 img,#contact_page_image3 img {width:100%;height:auto;}
 	#about_page_image1 {width:32%;height:auto;}
 	#about_page_image2 {width:66%;height:auto;}
 	#about_page_image1 img,#about_page_image2 img {width:100%;height:auto;}
+	.copyright {
+		padding:10px 0 15px 12px;	
+	}
 }
 
 
@@ -2701,8 +2734,6 @@ article #thumbnails ul li {
 
 /* ========================================================8888888888888 8888888 888888 >>>>>>>  Tablet Screen Small */
 @media (min-width : 640px) and (max-width : 768px) {
-
-	
 
    nav {
 		position: relative;
@@ -2725,14 +2756,7 @@ article #thumbnails ul li {
 	nav .nav-primary li a {
 		font-size: 12px;
 	}
-	.logo {
-    	position: relative;
-    	margin: auto;
-    	left: 0;
-    	margin-left: 0px;
-    	padding: 10px 0 5px 0;
-		width:70%;
-	}
+
 	nav div {
 		top: 0 !important;
 	}
@@ -2744,6 +2768,7 @@ article #thumbnails ul li {
 		min-width: 0 !important;
 		width: 95% !important;
 	}
+
 	.primary {
 		 right: -62px;
     width: 79%;
@@ -2837,7 +2862,7 @@ article #thumbnails ul li {
     nav select {
     	width: 480px;
     }
-
+	
     .imagecontainer {max-width:100%;}
 	#contact_page_image1,#contact_page_image2,#contact_page_image3 {width:32%;height:auto;}
 	#contact_page_image1 img,#contact_page_image2 img,#contact_page_image3 img {width:100%;height:auto;}
@@ -2853,6 +2878,9 @@ article #thumbnails ul li {
 		top:80%;
 		left:0;
 		
+	}
+	.copyright {
+		padding:10px 0 15px 12px;	
 	}
 }
 
@@ -3136,9 +3164,7 @@ article #thumbnails ul li {
     .panel {
     	position: absolute;
     }
-    .submitcontain .cap {
-    	width: 70px;
-    }
+
     .captain {
     	bottom: -32px;
     	font-size: 28px !important;
@@ -3191,7 +3217,8 @@ article #thumbnails ul li {
 		display:none;
 	}
 	.imagecontainer {max-width:100%;}
-	#contact_page_image1,#contact_page_image2{width:45%;height:auto;}
+
+	#contact_page_image1,#contact_page_image2{width:49%;height:auto;}
 	#contact_page_image1 img,#contact_page_image2 img{width:100%;height:auto;}
 	
 	#about_page_image2 {width:98%;height:auto;}
@@ -3287,8 +3314,8 @@ article #thumbnails ul li {
 	.primary-header .trigger {
 		display: none;
 	}
-	#smartbar h2{
-		font-size:14px;
+	#widenav li  h2{
+		font-size:22px;
 	}
 	.primary {
 		text-align: right;
@@ -3517,10 +3544,39 @@ article #thumbnails ul li {
 	#about_page_image1 img {width:100%;height:auto;}
 	.foot #rightfooterlast {
 	margin-left: 0;
-	width: 150px;
+	margin-bottom:20px;
+	}
+	.foot #rightfooterlast,#rightfootermid {
+	width: 80%;
+	}
+	.foot #rightfooterlast ul {
+	float: none;
+	}
+	.foot .socialmedialinks, .foot #rightfootermid {
+	min-height:80px;	
 	}
 	.foot h2 {
 	max-width: 120px;
 	}
-
+	.foot #rightfooterlast h2 {margin:10px;text-align:left}
+	.foot #rightfooterlast h2:before {
+	border:none;}
+	.foot #rightfooterlast h2:after{
+	border-bottom: 17px solid transparent;
+    border-left: 17px solid #FFFFFF;
+    border-top: 17px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -16px;
+    top: 0;
+    width: 0;	
+	}
+	.copyright {width:100%;padding:10px 10px 20px 20px}
+	.copyright p{
+	width:100%;	
+	text-align:left;
+	font-size:12px;
+	padding-bottom:10px
+	}
 }
